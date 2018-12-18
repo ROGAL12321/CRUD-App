@@ -1,0 +1,9 @@
+@import 'styles/variables.scss';
+
+.recipes-list__header {
+    color: $color-main;
+    font-size: $font-size-small;
+    font-weight: $font-weight-medium;
+    border-bottom: 1px solid #E0E0E0;
+    padding-bottom: 16px;
+}

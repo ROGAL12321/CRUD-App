@@ -1,0 +1,12 @@
+@import 'styles/variables.scss';
+
+.recipes-container {
+    box-shadow: 0 2px 4px -1px rgba(0,0,0,.2), 
+                0 4px 5px 0 rgba(0,0,0,.14), 
+                0 1px 10px 0 rgba(0,0,0,.12);
+    color: rgba($font-color-main, 0.87);
+    padding: 24px;
+    max-width: 500px;
+    margin: 40px auto;
+    background: $font-color-secondary;
+}

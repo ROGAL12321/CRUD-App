@@ -1,0 +1,33 @@
+@import 'styles/variables.scss';
+
+.recipes-item {
+    padding: 16px 0;
+
+    &__link {
+        text-decoration: none;
+        display: flex;
+    }
+
+    &__title {
+        font-size: $font-size-medium;
+        color: $font-color-main;
+    }
+
+    &__description-container {
+        padding: 5px 0;
+        margin-left: 32px;
+        width: 80%;
+    }
+
+    &__description {
+       font-size: $font-size-small;
+       color: rgba($font-color-main, 0.54);
+       font-weight: $font-weight-medium;
+    }
+
+    &__show-more {
+        float: right;
+        color: $font-color-main;
+        text-decoration: none;
+    }
+}
