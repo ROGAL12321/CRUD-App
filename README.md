@@ -1,6 +1,6 @@
 # Crud App
 
-To jest aplikacja testowa w ramach rekrutacji na stanowisko Front-End Developer w firmie infullmobile
+This is the recruitment task for the Front-End Developer position in infullmobile.
 
 ## Available Scripts
 
