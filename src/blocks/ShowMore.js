@@ -1,6 +1,6 @@
 import styled from 'styled-components';
 
-const ShowMore = styled.a`
+const ShowMore = styled.small`
   float: right;
   color: ${props => props.theme.fontColorMain};
   font-size: ${props => props.theme.fontSizeSmall}
