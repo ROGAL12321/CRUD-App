@@ -1,7 +1,7 @@
 import React from 'react';
 
-const NotFound = () => (
-    <p>Not Found</p>
-)
+import Title from 'blocks/Title';
+
+const NotFound = () => (<Title>Not Found</Title>)
 
 export default NotFound;
