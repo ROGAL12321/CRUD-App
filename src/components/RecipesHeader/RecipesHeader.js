@@ -1,14 +1,12 @@
 import React from 'react';
-
 import { Link } from 'react-router-dom';
 
 import Navigation from 'components/Navigation/Navigation';
 
-import Container from 'blocks/Container';
-import Header from 'blocks/Header';
-import HeaderContainer from 'blocks/HeaderContainer';
-
-import H1 from 'elements/H1';
+import Container from 'styledComponents/Container';
+import Header from 'styledComponents/Header';
+import HeaderContainer from 'styledComponents/HeaderContainer';
+import H1 from 'styledComponents/H1';
 
 const RecipesHeader = () => (
   <Header>

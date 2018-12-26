@@ -3,8 +3,8 @@ import { Link } from 'react-router-dom';
 
 import AddIcon from 'assets/add.svg';
 
-import HeaderIcon from 'blocks/HeaderIcon'
-import Icon from 'blocks/Icon'
+import HeaderIcon from 'styledComponents/HeaderIcon'
+import Icon from 'styledComponents/Icon'
 
 const Navigation = () => (
   <nav>

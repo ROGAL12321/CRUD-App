@@ -5,20 +5,21 @@ import {
 	Route,
 	Switch
 } from 'react-router-dom';
-import { ThemeProvider } from 'styled-components';
 
-import AddEditRecipe from 'containers/AddEditRecipe/AddEditRecipe';
-import RecipeDetail from 'containers/RecipeDetail/RecipeDetail';
-import RecipesList from 'containers/RecipesList/RecipesList';
+import { ThemeProvider } from 'styled-components';
+import mainTheme from 'themes/mainTheme';
+
+import RecipesPage from 'pages/RecipesPage/RecipesPage';
+import RecipeDetailPage from 'pages/RecipeDetailPage/RecipeDetailPage';
+import AddRecipePage from 'pages/AddRecipePage/AddRecipePage';
+import EditRecipePage from 'pages/EditRecipePage/EditRecipePage';
+import NotFoundPage from 'pages/NotFoundPage/NotFoundPage';
 
 import RecipesHeader from 'components/RecipesHeader/RecipesHeader';
-import NotFound from 'components/NotFound/NotFound';
 
-import mainTheme from 'mainTheme';
-
-import Global from 'blocks/Global';
-import Container from 'blocks/Container';
-import RecipeContainer from 'blocks/RecipeContainer'
+import Global from 'styledComponents/Global';
+import Container from 'styledComponents/Container';
+import RecipeContainer from 'styledComponents/RecipeContainer';
 
 const App = () => (
 	<Router>
@@ -28,11 +29,11 @@ const App = () => (
 				<Container>
 					<RecipeContainer>
 						<Switch>
-							<Route exact path="/" render={props => <RecipesList {...props} title="Recipes List"/>} />
-							<Route path="/recipe/:id" render={props => <RecipeDetail {...props} title="Recipe Info"/>} />
-							<Route path="/add" render={props => <AddEditRecipe {...props} title="Add Recipe"/>} />
-							<Route path="/edit/:id" render={props => <AddEditRecipe {...props} title="Edit Recipe"/>} />
-							<Route component={NotFound} />
+							<Route exact path="/" render={() => <RecipesPage title="Recipes List"/>} />
+							<Route path="/recipe/:id" render={props => <RecipeDetailPage {...props} title="Recipe Info"/>} />
+							<Route path="/add" render={props => <AddRecipePage {...props} title="Add Recipe"/>} />
+							<Route path="/edit/:id" render={props => <EditRecipePage {...props} title="Edit Recipe"/>} />
+							<Route component={NotFoundPage} />
 						</Switch>
 					</RecipeContainer>
 				</Container>

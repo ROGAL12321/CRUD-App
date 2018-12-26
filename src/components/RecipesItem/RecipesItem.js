@@ -1,14 +1,13 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
-
 import PropTypes from 'prop-types';
 
-import ShowMore from 'blocks/ShowMore';
-import Icon from 'blocks/Icon';
-import DescriptionContainer from 'blocks/DescriptionContainer';
-import Title from 'blocks/Title';
-import Description from 'blocks/Description';
-import RecipeItem from 'blocks/RecipeItem';
+import ShowMore from 'styledComponents/ShowMore';
+import Icon from 'styledComponents/Icon';
+import DescriptionContainer from 'styledComponents/DescriptionContainer';
+import Title from 'styledComponents/Title';
+import Description from 'styledComponents/Description';
+import RecipeItem from 'styledComponents/RecipeItem';
 
 const RecipesItem = ({ id, icon, title, description }) => {
   return (
