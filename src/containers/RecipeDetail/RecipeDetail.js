@@ -11,7 +11,8 @@ import Icon from 'styledComponents/Icon'
 import DetailContainer from 'styledComponents/DetailContainer'
 
 class RecipeDetail extends Component {
- 
+  
+  db = getDBInstance('recipes') 
   state = {
     recipe: null,
     fetching: true
@@ -19,18 +20,15 @@ class RecipeDetail extends Component {
 
   componentDidMount() {
     const { id } = this.props.match.params;
-    const { find } = getDBInstance('recipes');
 
-    find(id).then(recipe => this.setState({
+    this.db.find(id).then(recipe => this.setState({
       recipe,
       fetching: false
     })); 
   }
 
   deteleRecipe = () => {
-    const db = getDBInstance('recipes');
-
-    db.remove(this.state.recipe.id).then(() => 
+    this.db.remove(this.state.recipe.id).then(() => 
       this.props.history.push('/')
     ); 
   }
