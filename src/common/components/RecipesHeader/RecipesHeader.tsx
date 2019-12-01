@@ -1,14 +1,14 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 
-import Navigation from 'components/Navigation/Navigation';
+import Navigation from 'common/components/Navigation/Navigation';
 
 import Container from 'styledComponents/Container';
 import Header from 'styledComponents/Header';
 import HeaderContainer from 'styledComponents/HeaderContainer';
 import H1 from 'styledComponents/H1';
 
-const RecipesHeader = () => (
+const RecipesHeader: React.FC = () => (
   <Header>
     <Container>
       <HeaderContainer>
@@ -20,5 +20,5 @@ const RecipesHeader = () => (
     </Container>
   </Header>
 );
-  
+
 export default RecipesHeader;

@@ -1,5 +1,4 @@
 import React from 'react';
-import PropTypes from 'prop-types';
 import { Link, withRouter } from 'react-router-dom';
 
 import RecipeDetail from 'containers/RecipeDetail/RecipeDetail';
@@ -9,7 +8,9 @@ import ArrowIcon from 'assets/arrow.svg';
 import IconBack from 'styledComponents/IconBack';
 import H2 from 'styledComponents/H2';
 
-const RecipeDetailPage = ({title}) => (
+import { PageProps } from 'types'
+
+const RecipeDetailPage: React.FC<PageProps<any>> = ({ title }) => (
   <React.Fragment>
     <H2 centered>
         <Link to="/">
@@ -20,10 +21,5 @@ const RecipeDetailPage = ({title}) => (
     <RecipeDetail/>
   </React.Fragment>
 )
-
-
-RecipeDetailPage.propTypes = {
-  title: PropTypes.string.isRequired
-}
 
 export default withRouter(RecipeDetailPage);

@@ -15,13 +15,13 @@ import AddRecipePage from 'pages/AddRecipePage/AddRecipePage';
 import EditRecipePage from 'pages/EditRecipePage/EditRecipePage';
 import NotFoundPage from 'pages/NotFoundPage/NotFoundPage';
 
-import RecipesHeader from 'components/RecipesHeader/RecipesHeader';
+import RecipesHeader from 'common/components/RecipesHeader/RecipesHeader';
 
 import Global from 'styledComponents/Global';
 import Container from 'styledComponents/Container';
 import RecipeContainer from 'styledComponents/RecipeContainer';
 
-const App = () => (
+const App: React.FC = () => (
 	<Router>
 		<ThemeProvider theme={mainTheme}>
 			<React.Fragment>
@@ -29,7 +29,7 @@ const App = () => (
 				<Container>
 					<RecipeContainer>
 						<Switch>
-							<Route exact path="/" render={() => <RecipesPage title="Recipes List"/>} />
+							<Route exact path="/" render={props => <RecipesPage {...props} title="Recipes List"/>} />
 							<Route path="/recipe/:id" render={props => <RecipeDetailPage {...props} title="Recipe Info"/>} />
 							<Route path="/add" render={props => <AddRecipePage {...props} title="Add Recipe"/>} />
 							<Route path="/edit/:id" render={props => <EditRecipePage {...props} title="Edit Recipe"/>} />

@@ -6,7 +6,7 @@ import AddIcon from 'assets/add.svg';
 import HeaderIcon from 'styledComponents/HeaderIcon'
 import Icon from 'styledComponents/Icon'
 
-const Navigation = () => (
+const Navigation: React.FC = () => (
   <nav>
     <ul>
       <li>
