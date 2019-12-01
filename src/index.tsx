@@ -15,7 +15,7 @@ import AddRecipePage from 'pages/AddRecipePage/AddRecipePage';
 import EditRecipePage from 'pages/EditRecipePage/EditRecipePage';
 import NotFoundPage from 'pages/NotFoundPage/NotFoundPage';
 
-import RecipesHeader from 'common/components/RecipesHeader/RecipesHeader';
+import RecipesHeader from 'components/RecipesHeader/RecipesHeader';
 
 import Global from 'styledComponents/Global';
 import Container from 'styledComponents/Container';

@@ -1,33 +1,19 @@
-import React, { useState, useEffect } from 'react';
-
-import getDBInstance from 'helpers/storage';
-
-import RecipesItem from 'common/components/RecipesItem/RecipesItem';
-
+import React from 'react';
 import { Recipe } from 'types';
+import useRecipes from 'hooks/useRecipes';
+
+import RecipesItem from 'components/RecipesItem/RecipesItem'
 
 const RecipesList: React.FC = () => {
-  const [recipes, setRecipes] = useState<Recipe[]>([])
-  const [fetching, setFetching] = useState<boolean>(true)
+  const { recipes, loading } = useRecipes()
 
-  const getRecipes = () => {
-    const { get } = getDBInstance('recipes');
-
-    get().then((recipes: Recipe[]) => {
-      setRecipes(recipes);
-      setFetching(false);
-    })
-  }
-
-  useEffect(getRecipes, [])
-
-  if(fetching) {
-      return <p>Loading...</p>
+  if(loading) {
+    return null;
   }
 
   return (
     <ul>
-      {recipes.map(recipe => <RecipesItem key={recipe.id} {...recipe} />)}
+      {recipes.map((recipe: Recipe) => <RecipesItem key={recipe.id} {...recipe} />)}
     </ul>
   );
 }

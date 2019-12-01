@@ -1,6 +1,6 @@
 const getDBInstance = (name) => {
   const get = async () => (
-    localStorage && localStorage.getItem(name) 
+    localStorage && localStorage.getItem(name)
       ? JSON.parse(localStorage.getItem(name))
       : []
   )
@@ -22,7 +22,7 @@ const getDBInstance = (name) => {
     const items = await get();
     const listAfterRemove = items.filter(element => element.id !== id);
 
-    return localStorage.setItem(name, JSON.stringify(listAfterRemove))             
+    return localStorage.setItem(name, JSON.stringify(listAfterRemove))
   }
 
   const edit = async (id, item) => {

@@ -3,7 +3,7 @@ import React, { useState } from 'react';
 import uuidv4 from 'uuid/v4';
 
 import star from 'assets/star.svg';
-import RecipesForm from 'common/components/RecipesForm/RecipesForm';
+import RecipesForm from 'components/RecipesForm/RecipesForm';
 import { Recipe } from 'types';
 
 interface IProps {

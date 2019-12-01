@@ -1,7 +1,7 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 
-import Navigation from 'common/components/Navigation/Navigation';
+import Navigation from 'components/Navigation/Navigation';
 
 import Container from 'styledComponents/Container';
 import Header from 'styledComponents/Header';
